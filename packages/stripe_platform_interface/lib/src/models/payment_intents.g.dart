@@ -98,9 +98,9 @@ _$_ShippingDetails _$_$_ShippingDetailsFromJson(Map<String, dynamic> json) {
   return _$_ShippingDetails(
     address: Address.fromJson(json['address'] as Map<String, dynamic>),
     name: json['name'] as String,
-    carrier: json['carrier'] as String,
+    carrier: json['carrier'] as String?,
     phone: json['phone'] as String,
-    trackingNumber: json['trackingNumber'] as String,
+    trackingNumber: json['trackingNumber'] as String?,
   );
 }
 

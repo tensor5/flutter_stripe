@@ -603,9 +603,9 @@ class _$ShippingDetailsTearOff {
   _ShippingDetails call(
       {required Address address,
       required String name,
-      required String carrier,
+      required String? carrier,
       required String phone,
-      required String trackingNumber}) {
+      required String? trackingNumber}) {
     return _ShippingDetails(
       address: address,
       name: name,
@@ -632,14 +632,14 @@ mixin _$ShippingDetails {
   String get name => throw _privateConstructorUsedError;
 
   /// Deliver service that will ship the product
-  String get carrier => throw _privateConstructorUsedError;
+  String? get carrier => throw _privateConstructorUsedError;
 
   /// Recipient phone number.
   String get phone => throw _privateConstructorUsedError;
 
   /// Tracking number of the shipment. If multiple tracking numbers separate them
   /// with commas.
-  String get trackingNumber => throw _privateConstructorUsedError;
+  String? get trackingNumber => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -655,9 +655,9 @@ abstract class $ShippingDetailsCopyWith<$Res> {
   $Res call(
       {Address address,
       String name,
-      String carrier,
+      String? carrier,
       String phone,
-      String trackingNumber});
+      String? trackingNumber});
 
   $AddressCopyWith<$Res> get address;
 }
@@ -691,7 +691,7 @@ class _$ShippingDetailsCopyWithImpl<$Res>
       carrier: carrier == freezed
           ? _value.carrier
           : carrier // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       phone: phone == freezed
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
@@ -699,7 +699,7 @@ class _$ShippingDetailsCopyWithImpl<$Res>
       trackingNumber: trackingNumber == freezed
           ? _value.trackingNumber
           : trackingNumber // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 
@@ -721,9 +721,9 @@ abstract class _$ShippingDetailsCopyWith<$Res>
   $Res call(
       {Address address,
       String name,
-      String carrier,
+      String? carrier,
       String phone,
-      String trackingNumber});
+      String? trackingNumber});
 
   @override
   $AddressCopyWith<$Res> get address;
@@ -760,7 +760,7 @@ class __$ShippingDetailsCopyWithImpl<$Res>
       carrier: carrier == freezed
           ? _value.carrier
           : carrier // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       phone: phone == freezed
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
@@ -768,7 +768,7 @@ class __$ShippingDetailsCopyWithImpl<$Res>
       trackingNumber: trackingNumber == freezed
           ? _value.trackingNumber
           : trackingNumber // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -798,7 +798,7 @@ class _$_ShippingDetails implements _ShippingDetails {
   @override
 
   /// Deliver service that will ship the product
-  final String carrier;
+  final String? carrier;
   @override
 
   /// Recipient phone number.
@@ -807,7 +807,7 @@ class _$_ShippingDetails implements _ShippingDetails {
 
   /// Tracking number of the shipment. If multiple tracking numbers separate them
   /// with commas.
-  final String trackingNumber;
+  final String? trackingNumber;
 
   @override
   String toString() {
@@ -857,9 +857,9 @@ abstract class _ShippingDetails implements ShippingDetails {
   const factory _ShippingDetails(
       {required Address address,
       required String name,
-      required String carrier,
+      required String? carrier,
       required String phone,
-      required String trackingNumber}) = _$_ShippingDetails;
+      required String? trackingNumber}) = _$_ShippingDetails;
 
   factory _ShippingDetails.fromJson(Map<String, dynamic> json) =
       _$_ShippingDetails.fromJson;
@@ -875,7 +875,7 @@ abstract class _ShippingDetails implements ShippingDetails {
   @override
 
   /// Deliver service that will ship the product
-  String get carrier => throw _privateConstructorUsedError;
+  String? get carrier => throw _privateConstructorUsedError;
   @override
 
   /// Recipient phone number.
@@ -884,7 +884,7 @@ abstract class _ShippingDetails implements ShippingDetails {
 
   /// Tracking number of the shipment. If multiple tracking numbers separate them
   /// with commas.
-  String get trackingNumber => throw _privateConstructorUsedError;
+  String? get trackingNumber => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ShippingDetailsCopyWith<_ShippingDetails> get copyWith =>

@@ -4776,7 +4776,7 @@ class _$_PaymentMethodParamsFpx implements _PaymentMethodParamsFpx {
         cardFromToken,
     required TResult Function(String paymentMethodId, String? cvc)
         cardFromMethodId,
-    required TResult Function() aliPay,
+    required TResult Function() alipay,
     required TResult Function(BillingDetails? billingDetails, String? bankName)
         ideal,
     required TResult Function(BillingDetails billingDetails) bankContact,
@@ -4798,7 +4798,7 @@ class _$_PaymentMethodParamsFpx implements _PaymentMethodParamsFpx {
     TResult Function(String token, PaymentIntentsFutureUsage? setupFutureUsage)?
         cardFromToken,
     TResult Function(String paymentMethodId, String? cvc)? cardFromMethodId,
-    TResult Function()? aliPay,
+    TResult Function()? alipay,
     TResult Function(BillingDetails? billingDetails, String? bankName)? ideal,
     TResult Function(BillingDetails billingDetails)? bankContact,
     TResult Function(BillingDetails billingDetails)? giroPay,
@@ -4822,7 +4822,7 @@ class _$_PaymentMethodParamsFpx implements _PaymentMethodParamsFpx {
         cardFromToken,
     required TResult Function(_PaymentMethodParamsCardWithMethodId value)
         cardFromMethodId,
-    required TResult Function(_PaymentMethodParamsAli value) aliPay,
+    required TResult Function(_PaymentMethodParamsAlipay value) alipay,
     required TResult Function(_PaymentMethodParamsIdeal value) ideal,
     required TResult Function(_PaymentMethodParamsBankContact value)
         bankContact,
@@ -4842,7 +4842,7 @@ class _$_PaymentMethodParamsFpx implements _PaymentMethodParamsFpx {
     TResult Function(_PaymentMethodParamsCardWithToken value)? cardFromToken,
     TResult Function(_PaymentMethodParamsCardWithMethodId value)?
         cardFromMethodId,
-    TResult Function(_PaymentMethodParamsAli value)? aliPay,
+    TResult Function(_PaymentMethodParamsAlipay value)? alipay,
     TResult Function(_PaymentMethodParamsIdeal value)? ideal,
     TResult Function(_PaymentMethodParamsBankContact value)? bankContact,
     TResult Function(_PaymentMethodParamsGiroPay value)? giroPay,

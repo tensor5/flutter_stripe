@@ -45,6 +45,7 @@ class PaymentIntent with _$PaymentIntent {
 
     /// Method of how the payment will be confirmed.
     required ConfirmationMethod confirmationMethod,
+
     /// Localized description that provides additional context to users.
     String? description,
 
@@ -93,14 +94,14 @@ class ShippingDetails with _$ShippingDetails {
     required String name,
 
     /// Deliver service that will ship the product
-    required String carrier,
+    required String? carrier,
 
     /// Recipient phone number.
     required String phone,
 
     /// Tracking number of the shipment. If multiple tracking numbers separate them
     /// with commas.
-    required String trackingNumber,
+    required String? trackingNumber,
   }) = _ShippingDetails;
 
   factory ShippingDetails.fromJson(Map<String, dynamic> json) =>
@@ -123,6 +124,7 @@ enum PaymentIntentsFutureUsage {
 enum PaymentIntentsStatus {
   /// Completed.
   Succeeded,
+
   /// No payment method is attached to the intent.
   RequiresPaymentMethod,
 
